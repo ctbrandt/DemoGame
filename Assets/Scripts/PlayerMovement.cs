@@ -38,5 +38,9 @@ public class PlayerMovement : MonoBehaviour
             rb.AddForce(0, 0, -500 * Time.deltaTime);
         }
          */
+
+        if (rb.position.y < -1f) {
+            FindObjectOfType<GameManager>().EndGame();
+        }
     }
 }
